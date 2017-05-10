@@ -2,7 +2,7 @@
 from flask import Flask
 app = Flask(__name__)
 
-#new commit message?
+
 @app.route('/')
 def hello():
     text = ''
