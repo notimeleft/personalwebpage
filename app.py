@@ -25,7 +25,9 @@ def hello():
 	#cv2.imshow('img',img)
 	#cv2.waitKey(0)
 	#cv2.destroyAllWindows()
-	return "finished hello!"
+	cv2.imwrite('img.jpg',img)
+	return send_from_directory(app.config['UPLOAD_FOLDER'],'img.jpg')
+	
 
 if __name__ == '__main__':
     app.run()
