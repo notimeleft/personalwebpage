@@ -3,7 +3,7 @@ from flask import Flask,send_from_directory
 app = Flask(__name__)
 import cv2
 import numpy as np
-#will work
+#will work!
 app.config['UPLOAD_FOLDER'] = 'uploads/'
 
 
