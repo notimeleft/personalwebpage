@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"
+          rel="stylesheet">
+    
+    <style>
+      body {
+      background-image: url("/static/img/3.jpg");
+      }
+    </style>
+  </head>
+  
+
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1 class="text-muted">Jerry Wang, M.A Computer Science Brandeis class of 2017</h1>
+        <h3 class="text-muted">Aspiring Software Engineer interested in big data, machine learning and mobile applications</h3>
+      </div>
+      <hr/>
+      Upload a PDF File and Display it! Facial Recognition hopefully coming soon. 
+      <div>
+      <br></br>      
+      <form action="upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="file"><br /><br />
+        <input type="submit" value="Upload">
+      </form>
+      {% if nofile %}
+      <br>
+      <div>{{ nofile }}</div>
+      </br>
+      {% endif %}
+      </div>
+    </div>
+    
+    <p align="center">
+      <a href="{{ url_for('static',filename='JWang Resume.pdf') }}">Check out my Résumé!</a> 
+      | 
+      <a href = https://github.com/notimeleft> Take a look at my code on Github!</a>
+      |
+      <a href = https://www.linkedin.com/in/jerry-wang-63a0a911b> Connect with me on LinkedIn!</a>
+    </p>
+
+    
+
+    <p align="center">
+      My personal Email: 
+      <a href>jerry.wang.ct@gmail.com</a>
+    </p>
+
+        
+
+
+    <p align="center">
+      This web page was built using only a few files in flask, the pdf upload portion follows a simple tutorial by Miguel Molina. 
+    </p>  
+    <p align="center">  
+      Check it out here: 
+      <a href = http://code.runnable.com/UiPcaBXaxGNYAAAL/how-to-upload-a-file-to-the-server-in-flask-for-python> pdf upload tutorial</a>
+    </p>
+
+  </body>
+</html>
+ 
