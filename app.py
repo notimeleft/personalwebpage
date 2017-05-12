@@ -4,6 +4,7 @@ app = Flask(__name__)
 import cv2
 import numpy as np
 #will work
+app.config['UPLOAD_FOLDER'] = 'uploads/'
 @app.route('/')
 def hello():
 
@@ -25,7 +26,7 @@ def hello():
 	#cv2.imshow('img',img)
 	#cv2.waitKey(0)
 	#cv2.destroyAllWindows()
-	cv2.imwrite('img.jpg',img)
+	cv2.imwrite('uploads/img.jpg',img)
 	return send_from_directory(app.config['UPLOAD_FOLDER'],'img.jpg')
 	
 
