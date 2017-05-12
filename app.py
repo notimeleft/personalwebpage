@@ -1,7 +1,7 @@
 
 from flask import Flask
 app = Flask(__name__)
-
+import cv2
 #will work
 @app.route('/')
 def hello():
