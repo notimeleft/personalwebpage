@@ -44,32 +44,7 @@ def upload():
         return render_template('index.html',nofile='Please select a file to upload!')    	
 
 	
-@app.route('/opencv/<filename>')	
-def show_cvimg(filename):
-	
-	try:
-		face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
-		eye_cascade = cv2.CascadeClassifier('haarcascade_eye.xml')
-		img = cv2.imread('uploads/original_img')
-		gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
-
-		faces = face_cascade.detectMultiScale(gray, 1.3, 5)
-		for (x,y,w,h) in faces:
-		    cv2.rectangle(img,(x,y),(x+w,y+h),(255,0,0),2)
-		    roi_gray = gray[y:y+h, x:x+w]
-		    roi_color = img[y:y+h, x:x+w]
-		    eyes = eye_cascade.detectMultiScale(roi_gray)
-		    for (ex,ey,ew,eh) in eyes:
-		        cv2.rectangle(roi_color,(ex,ey),(ex+ew,ey+eh),(0,255,0),2)
-		#cv2.imshow('img',img)
-		#cv2.waitKey(0)
-		#cv2.destroyAllWindows()
-		cv2.imwrite('uploads/processed_img.jpg',img)
-		#return "eh?"
-		return send_from_directory(app.config['UPLOAD_FOLDER'],'processed_img.jpg')
-	except:
-		return render_template('index.html',nofile='Looks like the picture format wasn\'t acceptable! please try another picture.') 
 
 
 
