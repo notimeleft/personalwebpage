@@ -6,7 +6,7 @@ import cv2
 import numpy as np
 
 app = Flask(__name__)
-#will work!
+#will work???
 app.config['UPLOAD_FOLDER'] = 'uploads/'
 app.config['ALLOWED_EXTENSIONS'] = set(['txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'])
 
