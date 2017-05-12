@@ -1,5 +1,8 @@
-# personalwebpage
-My personal web page written as a flask app. Now with Facial Detection! Please try it out.
+# personal webpage
+
+My personal web page written as a flask app. Now with Facial Detection! Please try it out:
+
+http://jerrywang.herokuapp.com
 
 Hi there! This is my personal web page built using flask. 
 Visit the page, email me any comments or suggests, connect with me on linkedin! 
