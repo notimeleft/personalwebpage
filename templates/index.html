@@ -18,8 +18,8 @@
         <h1 class="text-muted">Jerry Wang, M.A Computer Science Brandeis class of 2017</h1>
         <h3 class="text-muted">Aspiring Software Engineer interested in big data, machine learning and mobile applications</h3>
       </div>
-      <hr/>
-      Upload a PDF File and Display it! Facial Recognition hopefully coming soon. 
+      
+      Please try my facial detection feature! Upload an image file (.png or .jpg) to see if I can detect any faces in the picture: using the magic of opencv, I will attempt to draw a blue rectangle around any faces and green rectangles around any eyes that opencv's facial recognition algorithm detects.  
       <div>
       <br></br>      
       <form action="upload" method="post" enctype="multipart/form-data">
@@ -53,12 +53,19 @@
 
 
     <p align="center">
-      This web page was built using only a few files in flask, the pdf upload portion follows a simple tutorial by Miguel Molina. 
+      This web page was built using only a few files in flask, the pdf upload portion follows a simple tutorial by Miguel Molina and the facial recognition feature follows multiple tutorials on heroku and opencv. 
     </p>  
     <p align="center">  
-      Check it out here: 
+      Check Miguel's tutorial out here: 
       <a href = http://code.runnable.com/UiPcaBXaxGNYAAAL/how-to-upload-a-file-to-the-server-in-flask-for-python> pdf upload tutorial</a>
+      <br>
+      </br>
+      And this is the Heroku buildpack I used to compile opencv's library to use its awesome facial detection algorithm: 
+      <a href = https://github.com/kennethreitz/conda-buildpackhow-to-upload-a-file-to-the-server-in-flask-for-python> python opencv buildpack for heroku</a>
+
     </p>
+
+
 
   </body>
 </html>
